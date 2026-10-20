@@ -1,0 +1,134 @@
+MODEL-SELECTION SENSITIVITY AND BREAKPOINT STABILITY
+Primary candidate space: 2000-2024; 0-4 breakpoints; minimum segment length 4 years.
+Weighted piecewise log-linear regression; inverse-variance weights in log scale.
+
+BIC vs AICc selected configurations:
+         Outcome BIC_breakpoints  BIC_value AICc_breakpoints AICc_value
+ Cerebrovascular       2008;2020 -129.14076        2008;2020 -132.07724
+        Dementia       2006;2010  -86.87939        2006;2010  -89.81588
+       Alzheimer       2006;2011  -85.40139        2006;2011  -88.33787
+       Parkinson       2006;2017  -99.69943        2006;2017 -102.63591
+             NTI  2005;2010;2019 -104.59128   2005;2010;2019 -107.23786
+ Same_selected_configuration Frozen_primary_breakpoints
+                        TRUE                  2008;2020
+                        TRUE                  2006;2010
+                        TRUE                  2006;2011
+                        TRUE                  2006;2017
+                        TRUE             2005;2010;2019
+ Reproduces_frozen_primary
+                      TRUE
+                      TRUE
+                      TRUE
+                      TRUE
+                      TRUE
+
+Breakpoint inclusion weights (compact):
+         Outcome Breakpoint_year BIC_inclusion_weight AICc_inclusion_weight
+       Alzheimer            2006            0.5114784            0.50710058
+       Alzheimer            2011            0.4085679            0.41196780
+       Alzheimer            2010            0.2956025            0.27640782
+       Alzheimer            2007            0.2579347            0.26878225
+       Alzheimer            2015            0.2280101            0.21045601
+       Alzheimer            2012            0.1853695            0.19714604
+       Alzheimer            2005            0.1729427            0.16806501
+       Alzheimer            2016            0.1500155            0.14314721
+       Alzheimer            2020            0.1350027            0.11365865
+       Alzheimer            2014            0.1344813            0.12498543
+       Alzheimer            2019            0.1163211            0.10239973
+ Cerebrovascular            2020            0.6358768            0.63167930
+ Cerebrovascular            2008            0.4510904            0.45085302
+ Cerebrovascular            2009            0.3138595            0.31929103
+ Cerebrovascular            2019            0.2795051            0.28120451
+ Cerebrovascular            2004            0.1705573            0.14514724
+ Cerebrovascular            2015            0.1152380            0.10364757
+ Cerebrovascular            2014            0.1125962            0.10246252
+ Cerebrovascular            2007            0.1046460            0.10297375
+ Cerebrovascular            2013            0.1025044            0.09464143
+        Dementia            2010            0.6140204            0.61359594
+        Dementia            2006            0.4744008            0.47424478
+        Dementia            2011            0.3389124            0.33896931
+        Dementia            2005            0.2439040            0.24265964
+        Dementia            2020            0.2300792            0.20797250
+        Dementia            2018            0.1405101            0.13734314
+        Dementia            2007            0.1374897            0.13867443
+        Dementia            2019            0.1350074            0.12617953
+        Dementia            2015            0.1306545            0.11628650
+        Dementia            2004            0.1268653            0.12522345
+        Dementia            2016            0.1188625            0.11081730
+        Dementia            2017            0.1052758            0.10623844
+             NTI            2010            0.6589247            0.64798313
+             NTI            2005            0.5342301            0.53187103
+             NTI            2011            0.3335405            0.34445485
+             NTI            2019            0.3043580            0.28638575
+             NTI            2006            0.2377085            0.24002330
+             NTI            2020            0.1963756            0.17934630
+             NTI            2004            0.1945789            0.19314982
+             NTI            2015            0.1481371            0.12637024
+             NTI            2018            0.1195413            0.11869758
+             NTI            2014            0.1045560            0.08774773
+       Parkinson            2006            0.8916991            0.89438014
+       Parkinson            2017            0.3684638            0.38041716
+       Parkinson            2016            0.2917754            0.28699655
+       Parkinson            2020            0.1794112            0.15930071
+       Parkinson            2010            0.1290512            0.11590653
+       Parkinson            2011            0.1267395            0.11512916
+       Parkinson            2012            0.1189508            0.11025223
+       Parkinson            2015            0.1166735            0.11012871
+       Parkinson            2018            0.1140335            0.11512229
+ In_frozen_primary
+              TRUE
+              TRUE
+             FALSE
+             FALSE
+             FALSE
+             FALSE
+             FALSE
+             FALSE
+             FALSE
+             FALSE
+             FALSE
+              TRUE
+              TRUE
+             FALSE
+             FALSE
+             FALSE
+             FALSE
+             FALSE
+             FALSE
+             FALSE
+              TRUE
+              TRUE
+             FALSE
+             FALSE
+             FALSE
+             FALSE
+             FALSE
+             FALSE
+             FALSE
+             FALSE
+             FALSE
+             FALSE
+              TRUE
+              TRUE
+             FALSE
+              TRUE
+             FALSE
+             FALSE
+             FALSE
+             FALSE
+             FALSE
+             FALSE
+              TRUE
+              TRUE
+             FALSE
+             FALSE
+             FALSE
+             FALSE
+             FALSE
+             FALSE
+             FALSE
+
+Candidate count by outcome:
+
+      Alzheimer Cerebrovascular        Dementia             NTI       Parkinson 
+            344             344             344             344             344 
