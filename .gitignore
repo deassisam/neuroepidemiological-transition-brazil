@@ -1,0 +1,13 @@
+.venv/
+__pycache__/
+*.pyc
+.DS_Store
+.kaggle/
+data/raw/*
+!data/raw/.gitkeep
+data/processed/*
+!data/processed/.gitkeep
+outputs/article2/*
+!outputs/reviewer_revision/
+outputs/qc/*
+!outputs/qc/.gitkeep
