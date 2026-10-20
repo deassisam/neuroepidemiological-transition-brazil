@@ -1,0 +1,8 @@
+<PARSED TEXT FOR SHEET: 1 / 1 TABS
+TAB NAME: C8_outputs__reviewer_revision__model_selection_BIC_vs_AICc.csv>
+index,Outcome,BIC_breakpoints,BIC_value,AICc_breakpoints,AICc_value,Same_selected_configuration,Frozen_primary_breakpoints,Reproduces_frozen_primary
+0,Cerebrovascular,2008;2020,-129.140756696274,2008;2020,-132.077241083772,True,2008;2020,True
+1,Dementia,2006;2010,-86.8793927243829,2006;2010,-89.8158771118818,True,2006;2010,True
+2,Alzheimer,2006;2011,-85.4013862046309,2006;2011,-88.3378705921297,True,2006;2011,True
+3,Parkinson,2006;2017,-99.6994294112342,2006;2017,-102.635913798733,True,2006;2017,True
+4,NTI,2005;2010;2019,-104.591275279236,2005;2010;2019,-107.237863561779,True,2005;2010;2019,True
