@@ -1,0 +1,22 @@
+<PARSED TEXT FOR SHEET: 1 / 1 TABS
+TAB NAME: B10_resources__who_world_standard_2000_2025_weights.csv>
+index,age_group,raw_percent,normalized_weight_note
+0,00-04,8.86,normalized in 06_article2_rates.py
+1,05-09,8.69,normalized in 06_article2_rates.py
+2,10-14,8.6,normalized in 06_article2_rates.py
+3,15-19,8.47,normalized in 06_article2_rates.py
+4,20-24,8.22,normalized in 06_article2_rates.py
+5,25-29,7.93,normalized in 06_article2_rates.py
+6,30-34,7.61,normalized in 06_article2_rates.py
+7,35-39,7.15,normalized in 06_article2_rates.py
+8,40-44,6.59,normalized in 06_article2_rates.py
+9,45-49,6.04,normalized in 06_article2_rates.py
+10,50-54,5.37,normalized in 06_article2_rates.py
+11,55-59,4.55,normalized in 06_article2_rates.py
+12,60-64,3.72,normalized in 06_article2_rates.py
+13,65-69,2.96,normalized in 06_article2_rates.py
+14,70-74,2.21,normalized in 06_article2_rates.py
+15,75-79,1.52,normalized in 06_article2_rates.py
+16,80-84,0.91,normalized in 06_article2_rates.py
+17,85-89,0.44,normalized in 06_article2_rates.py
+18,90+,0.195,90-94 + 95-99 + 100+; normalized in 06_article2_rates.py
