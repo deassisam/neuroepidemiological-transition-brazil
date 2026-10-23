@@ -373,7 +373,8 @@ def make_figure2(rates, table2, outdir):
 
         ax.text(
             *box_pos[cause], annotation_text(table2, cause),
-            transform=ax.transAxes, va="top", ha="left", fontsize=9.0,\n            linespacing=1.06,
+            transform=ax.transAxes, va="top", ha="left", fontsize=9.0,
+            linespacing=1.06,
             bbox=dict(
                 boxstyle="round,pad=0.42", facecolor="white",
                 edgecolor="0.65", linewidth=0.75, alpha=0.96
