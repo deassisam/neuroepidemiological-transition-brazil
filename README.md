@@ -89,3 +89,16 @@ The `17_regional_uncertainty.py` script extracts the Poisson-approximation 95% c
 ## Repository status
 
 This repository is the public reproducibility resource accompanying the manuscript revision. The revision snapshot can additionally be archived in an external preservation service (for example, Zenodo) to obtain a version-specific DOI if required by the journal.
+
+
+## Independent verification
+
+For reviewer-oriented replication and numerical auditing, see:
+
+- [REPRODUCIBILITY.md](REPRODUCIBILITY.md) — full-from-source and analysis-ready reproduction routes, output map, and numerical checks.
+- [MODEL_SPECIFICATIONS.md](MODEL_SPECIFICATIONS.md) — formal model definitions, weights, uncertainty calculations, APC/AAPC, and Shapley decomposition.
+- [verify_reported_results.py](verify_reported_results.py) — automated manuscript-level numerical verification.
+- [expected_results/](expected_results/) — frozen principal-result checks used by the verification script.
+- [prepare_reviewer1_bundle.sh](prepare_reviewer1_bundle.sh) — helper for packaging the frozen non-identifiable analysis-ready inputs and exact model outputs from the original analysis workspace.
+
+The individual-level SIM microdata are not redistributed. Frozen analysis-ready files, when provided, contain only aggregated cause-specific death counts and official population denominators.
