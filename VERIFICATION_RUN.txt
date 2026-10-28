@@ -1,0 +1,11 @@
+Reviewer-oriented numerical verification
+Date: 2026-10-28
+Command: python verify_reported_results.py
+Result: PASS: all principal manuscript-level numerical checks reproduced.
+
+Verified categories:
+- national 2000 and 2024 age-standardized mortality endpoints
+- 2000 and 2024 NTI endpoints
+- primary breakpoint configurations
+- primary AAPCs
+- 2000-2024 Shapley decomposition values and reconstruction residuals
