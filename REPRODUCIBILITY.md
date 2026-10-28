@@ -46,12 +46,12 @@ bash reproduce_main_results.sh --from-source
 
 ### Route B — Reproduction from frozen analysis-ready aggregate inputs
 
-For faster independent verification, the revision package is designed to include frozen, non-identifiable aggregate inputs derived from the public source data:
+For faster independent verification, the public repository now includes frozen, non-identifiable aggregate inputs derived from the public source data:
 
 - `data/analysis_ready/article2_underlying_counts_2000_2024.parquet`
 - `data/analysis_ready/ibge_population_all_geographies_2000_2024.parquet`
 
-These contain aggregated cause-specific death counts and official population denominators, not individual death-certificate microdata. The repository script `reproduce_main_results.sh --from-analysis-ready` copies these frozen inputs into the expected pipeline locations and reproduces the downstream ASMR, NTI, decomposition, trend, sensitivity, table, and figure outputs.
+These contain aggregated cause-specific death counts and official population denominators, not individual death-certificate microdata. The repository script `reproduce_main_results.sh --from-analysis-ready` copies these frozen inputs into the expected pipeline locations and reproduces the downstream ASMR, NTI, decomposition, trend, sensitivity, table, and figure outputs. The record-level regional-quality analysis is intentionally not rerun in this route because it requires the harmonized SIM record-level master; the exact frozen regional-quality outputs used in the revision are provided under `outputs/reviewer_revision/`.
 
 ## Principal generated outputs
 
@@ -71,7 +71,17 @@ The most important audit files are:
 
 ## Independent numerical verification
 
-After the pipeline has run, execute:
+A reviewer can immediately audit the principal reported values without rerunning the full pipeline:
+
+```bash
+python verify_reported_results.py
+```
+
+The repository includes compact frozen national outputs under `frozen_outputs/`, the exact Shapley and segmented-regression outputs under `outputs/article2/`, and manuscript-level expected checks under `expected_results/`. The verification script automatically uses generated outputs when available and otherwise falls back to the frozen national audit files.
+
+After a full pipeline run, the same command verifies the newly generated outputs against the same frozen checks.
+
+Execute:
 
 ```bash
 python verify_reported_results.py
@@ -105,3 +115,20 @@ Individual SIM death-certificate microdata are not redistributed in this reposit
 - R 4.6.1 for the final temporal-trend analyses used in the revision
 
 The scripts are deterministic given the same input files. No stochastic model fitting or random seed is involved in the primary analyses.
+
+## Frozen audit files and integrity
+
+The repository includes:
+
+- `frozen_outputs/national_standardized_rates.csv`
+- `frozen_outputs/national_nti.csv`
+- `frozen_outputs/national_rate_denominator_qc.csv`
+- `outputs/article2/article2_decomposition.csv`
+- `outputs/article2/piecewise_bic_sensitivity/sensitivity_selected_models.csv`
+- `outputs/article2/piecewise_bic_sensitivity/sensitivity_APC_by_segment.csv`
+- `outputs/article2/piecewise_bic_sensitivity/sensitivity_AAPC.csv`
+- `outputs/article2/final/table2_piecewise_trends.csv`
+- `ANALYSIS_FILE_SHA256.txt`
+- `VERIFICATION_RUN.txt`
+
+The SHA-256 file records the hashes of the frozen analysis inputs and principal outputs supplied for reviewer verification.
