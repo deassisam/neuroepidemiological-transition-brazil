@@ -44,7 +44,12 @@ python 12_article2_final_outputs.py
 python 14_article2_final_figures_exact_v4.py
 
 echo "[10/10] Running reviewer-requested analyses and numerical verification"
-python 15_regional_sim_quality.py
+if [[ "$MODE" == "--from-source" ]]; then
+  python 15_regional_sim_quality.py
+else
+  echo "Skipping 15_regional_sim_quality.py in analysis-ready mode because it requires the record-level harmonized SIM master."
+  echo "The frozen regional-quality outputs used in the revision are included under outputs/reviewer_revision/."
+fi
 Rscript 16_aicc_deltaBIC_breakpoint_stability.R
 python 17_regional_uncertainty.py
 python verify_reported_results.py
