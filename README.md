@@ -101,4 +101,4 @@ For reviewer-oriented replication and numerical auditing, see:
 - [expected_results/](expected_results/) — frozen principal-result checks used by the verification script.
 - [prepare_reviewer1_bundle.sh](prepare_reviewer1_bundle.sh) — helper for packaging the frozen non-identifiable analysis-ready inputs and exact model outputs from the original analysis workspace.
 
-The individual-level SIM microdata are not redistributed. Frozen analysis-ready files, when provided, contain only aggregated cause-specific death counts and official population denominators.
+The individual-level SIM microdata are not redistributed. Frozen non-identifiable analysis-ready files are included under `data/analysis_ready/` and contain only aggregated cause-specific death counts and official population denominators. Compact national audit outputs are included under `frozen_outputs/`; running `python verify_reported_results.py` immediately checks the principal reported endpoints, breakpoint configurations, AAPCs, and Shapley results.
